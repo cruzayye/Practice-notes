@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+    <style>
+        label {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+   <!-- <h1>Just an App</h1>
+    <main>
+
+        
+
+        <p>how to create an input that takes the users input and displays it in html P. tag</p>
+
+        <p> in order to complete this task create a form, a button which
+            is going to call the function using the onclick function to insert 
+            whatever the user typed in 
+            an empty p element. 
+        </p>
+        <p>
+        
+          <label>
+              name: 
+              <input id="name">
+          </label>
+
+          <button onclick="showname()">submit</button>
+          <p id ="result"></p>
+
+
+
+
+    </main>
+-->
+    
+
+
+
+</body>
+<script>
+
+    //DO LOOP
+
+    var i = 1;
+    var msg ='';
+    do{
+        msg += i + ' x 5 =' + (i*5) + '<br />';
+        i++;
+    
+    } while (i<1);
+    console.log(i);
+
+
+
+
+    /*
+
+    //WHILE LOOP ( creating a loop that ouptuts a times table of 5)
+    // WHY ISNT THIS PRINTING TO 5 LIKE PG 176??
+
+    var i =1;
+    var msg ='';
+   
+        while ( i> 5){
+            msg += i + 'x 5' + (i*5) +'<br />';
+            i++;
+            console.log(i);
+        
+        } 
+
+    */
+   
+
+   /*
+   SYNTAX OF A FORLOOP 
+
+   var i
+   for( var i = 0; i<10; i++){
+       console.log(i);
+   }
+   */
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   /*
+
+    var greeting = 'whatsup ';
+    var name = 'molly';
+    var hello =' whats good?';
+    var message = greeting + name + hello;
+    console.log(message);
+
+    var sign = 'For sale';
+    var count = sign.length;
+    var subtotal = count * 5;
+    var grandtotal = subtotal + 7;
+    console.log(grandtotal);
+
+   
+
+       Original
+       
+        function showname(){
+
+        var input = document.getElementById('name');
+        var name = input.value;
+        var p = document.getElementById('result');
+
+        }
+
+   */
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+        
+    </script>
+</html>
+
+<!--
+    -----simple for loop 
+var x = 100;
+
+for (var i = 0; i < x; i++){
+    console.log(i);
+}
+
+
+---FIZZ/BUZZ conditional statment challenge
+
+var x = 100;
+
+
+for(var i = 0; i < x; i++) {
+    if(i % 3 === 0) {
+        console.log( i, 'fizz');
+    }
+    else if(i % 5 === 0) {
+        console.log( i, 'buzz');
+    }
+    else {
+        console.log(i);
+    }
+}
+
+
+
+
+
+--basic Dom Manipulation 
+    HTML
+            <label>
+                Name:
+                <input id="name">
+            </label>
+
+        <button onclick = "showname()">submit</button>
+
+        <p id="result"></p>
+
+    
+    SCRIPT
+        function showname(){
+            var input = document.getElementById('name');
+            var name = input.value; 
+            var p = document.getElementById('result');
+            p.innerText = 'your name is ' +  name;
+        }
+
+
+
+
+    
+
+-- POWER CALCULATOR
+
+
+    <main>
+        <p>
+            <label>
+                Number:
+                <input type="number" id="number">
+            </label>
+        </p>
+
+        <p>
+            <label>
+                <input name="power" type="radio" value="2"> Square
+            </label>
+            <label>
+                <input name="power" type="radio" value="3"> Cube
+            </label>
+            <label>
+                <input name="power" type="radio" value="4"> Tesseract
+            </label>
+        </p>
+
+        <p>
+            <button onclick="calc()">click me</button>
+        </p>
+
+        <p id="result">Enter a number and a power to begin!</p>
+    </main>
+    <scrip>
+        function calc() {
+            var p = document.getElementById('result');
+            var input = document.getElementById('number');
+            var radio = document.querySelector('input[name=power]:checked');
+            
+            var number = input.value;
+            var power = radio.value;
+            var result = number ** power;
+            
+            p.innerHTML = number + ' to the ' + power + ' is <strong>' + result + '</strong>';
+            if(result > 2500) {
+                p.classList.add('big-number');
+            }
+            else {
+                p.classList.remove('big-number');
+            }   
+            
+        }
+    </script>
+
+
+
+
+
+
+-->
+
+
+
+
