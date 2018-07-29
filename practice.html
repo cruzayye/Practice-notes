@@ -3,333 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>practice</title>
-    <style>
-        label {
-            cursor: pointer;
-        }
-    </style>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 </head>
 <body>
-   <!-- <h1>Just an App</h1>
-    <main>
+    <h1>Functions</h1>
+    <input type="button" value="say Hello" onclick="sayHello()">
 
-        
-
-        <p>how to create an input that takes the users input and displays it in html P. tag</p>
-
-        <p> in order to complete this task create a form, a button which
-            is going to call the function using the onclick function to insert 
-            whatever the user typed in 
-            an empty p element. 
-        </p>
-        <p>
-        
-          <label>
-              name: 
-              <input id="name">
-          </label>
-
-          <button onclick="showname()">submit</button>
-          <p id ="result"></p>
-
-
-
-
-    </main>
--->
+    <table border="1" align="center" width="300" height="150">
+        <tr>
+            <td colspan="3">1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>width="50">4</td>
+            <td>width="150">5</td>
+            <td>rowspan="2">6</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+        </tr>
+    </table>
     
-
-
-
 </body>
-<script>
 
-    //
+<script >
+    //INTRO TO FUNCTIONS AND SCOPE
+    var generic = 'hello world';
 
-    //functions with paraemeters
-    let orderCount = 0;
-
-    const takeOrder = (topping, crustType) => {
-    orderCount++;
-    console.log('Order: ' + crustType + ' pizza topped with ' + topping);
-    };
-
-    takeOrder('mushroom', 'thin crust');
-    takeOrder('spinach', 'whole wheat');
-    takeOrder('pepperoni', 'brooklyn style');
-
-    const getSubTotal = (itemCount) => {
-    return itemCount * 7.5;
-    };
-
-    const getTax = (itemCount) => {
-    return getSubTotal(itemCount) * 0.06
+    function sayHello(name){
+        //name still needs to be defined
+        if(name == ""){
+            alert(generic);
+        } else{
+        alert(name);
+        }
     }
 
-    const getTotal = (itemCount) => {
-    return getTax(itemCount) + getSubTotal(itemCount)
+    function getusername(){
+        var name = prompt('whats your name');
+
     }
 
-    console.log(getSubTotal(orderCount));
+    function numbers(x,y){
+        return x + y;
+    }
 
-    console.log(getTotal(orderCount))
 
-    //SWITCH STATEMENT act as if statment with a bunch of else if, good to use when your dealing with a lot of opitons. 
-    let moonPhase = 'full';
 
-    switch (moonPhase){
-        case 'full':
-        console.log('Howl!');
-        break;
-  
-    case 'mostly new':
-        console.log('Back on two feet');
-        break;
+/*
+   var username = prompt('put in uername');
+   while ((username == '') || (username == undefined)){
+        username = prompt('put in uername');
+
+    } 
     
-    case 'mostly full':
-        console.log('Arms and legs are getting harieir');
-        break;
-    
-    default:
-        console.log('Invalid moon phase');
-        break;
-}
+    for (var counter = 3; counter>=1; counter--){
+        alert(counter);
+    }
+
+*/
 
 
 
+    /*alert('hello');
 
-
-    /*
-
-
-
-    
-
-    //DO LOOP
-
-    var i = 1;
-    var msg ='';
-    do{
-        msg += i + ' x 5 =' + (i*5) + '<br />';
-        i++;
-    
-    } while (i<1);
-    console.log(i);
-
-
-    //WHILE LOOP ( creating a loop that ouptuts a times table of 5)
-    // WHY ISNT THIS PRINTING TO 5 LIKE PG 176??
-
-    var i =1;
-    var msg ='';
-   
-        while ( i> 5){
-            msg += i + 'x 5' + (i*5) +'<br />';
-            i++;
-            console.log(i);
-        
-        } 
-
+    //this is a function that will turn a string to a number. ex "0" would now equal 0
+    parseInt(var)
     */
-   
-
-   /*
-   SYNTAX OF A FORLOOP 
-
-   var i
-   for( var i = 0; i<10; i++){
-       console.log(i);
-   }
-   */
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   /*
-
-    var greeting = 'whatsup ';
-    var name = 'molly';
-    var hello =' whats good?';
-    var message = greeting + name + hello;
-    console.log(message);
-
-    var sign = 'For sale';
-    var count = sign.length;
-    var subtotal = count * 5;
-    var grandtotal = subtotal + 7;
-    console.log(grandtotal);
-
-   
-
-       Original
-       
-        function showname(){
-
-        var input = document.getElementById('name');
-        var name = input.value;
-        var p = document.getElementById('result');
-
-        }
-
-   */
-
-
-
-
-
-
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-
-        
-    </script>
+</script>
 </html>
-
-<!--
-    -----simple for loop 
-var x = 100;
-
-for (var i = 0; i < x; i++){
-    console.log(i);
-}
-
-
----FIZZ/BUZZ conditional statment challenge
-
-var x = 100;
-
-
-for(var i = 0; i < x; i++) {
-    if(i % 3 === 0) {
-        console.log( i, 'fizz');
-    }
-    else if(i % 5 === 0) {
-        console.log( i, 'buzz');
-    }
-    else {
-        console.log(i);
-    }
-}
-
-
-
-
-
---basic Dom Manipulation 
-    HTML
-            <label>
-                Name:
-                <input id="name">
-            </label>
-
-        <button onclick = "showname()">submit</button>
-
-        <p id="result"></p>
-
-    
-    SCRIPT
-        function showname(){
-            var input = document.getElementById('name');
-            var name = input.value; 
-            var p = document.getElementById('result');
-            p.innerText = 'your name is ' +  name;
-        }
-
-
-
-
-    
-
--- POWER CALCULATOR
-
-
-    <main>
-        <p>
-            <label>
-                Number:
-                <input type="number" id="number">
-            </label>
-        </p>
-
-        <p>
-            <label>
-                <input name="power" type="radio" value="2"> Square
-            </label>
-            <label>
-                <input name="power" type="radio" value="3"> Cube
-            </label>
-            <label>
-                <input name="power" type="radio" value="4"> Tesseract
-            </label>
-        </p>
-
-        <p>
-            <button onclick="calc()">click me</button>
-        </p>
-
-        <p id="result">Enter a number and a power to begin!</p>
-    </main>
-    <scrip>
-        function calc() {
-            var p = document.getElementById('result');
-            var input = document.getElementById('number');
-            var radio = document.querySelector('input[name=power]:checked');
-            
-            var number = input.value;
-            var power = radio.value;
-            var result = number ** power;
-            
-            p.innerHTML = number + ' to the ' + power + ' is <strong>' + result + '</strong>';
-            if(result > 2500) {
-                p.classList.add('big-number');
-            }
-            else {
-                p.classList.remove('big-number');
-            }   
-            
-        }
-    </script>
-
-
-
-
-
-
--->
-
-
-
-
