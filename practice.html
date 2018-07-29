@@ -45,6 +45,67 @@
 </body>
 <script>
 
+    //
+
+    //functions with paraemeters
+    let orderCount = 0;
+
+    const takeOrder = (topping, crustType) => {
+    orderCount++;
+    console.log('Order: ' + crustType + ' pizza topped with ' + topping);
+    };
+
+    takeOrder('mushroom', 'thin crust');
+    takeOrder('spinach', 'whole wheat');
+    takeOrder('pepperoni', 'brooklyn style');
+
+    const getSubTotal = (itemCount) => {
+    return itemCount * 7.5;
+    };
+
+    const getTax = (itemCount) => {
+    return getSubTotal(itemCount) * 0.06
+    }
+
+    const getTotal = (itemCount) => {
+    return getTax(itemCount) + getSubTotal(itemCount)
+    }
+
+    console.log(getSubTotal(orderCount));
+
+    console.log(getTotal(orderCount))
+
+    //SWITCH STATEMENT act as if statment with a bunch of else if, good to use when your dealing with a lot of opitons. 
+    let moonPhase = 'full';
+
+    switch (moonPhase){
+        case 'full':
+        console.log('Howl!');
+        break;
+  
+    case 'mostly new':
+        console.log('Back on two feet');
+        break;
+    
+    case 'mostly full':
+        console.log('Arms and legs are getting harieir');
+        break;
+    
+    default:
+        console.log('Invalid moon phase');
+        break;
+}
+
+
+
+
+
+    /*
+
+
+
+    
+
     //DO LOOP
 
     var i = 1;
@@ -56,10 +117,6 @@
     } while (i<1);
     console.log(i);
 
-
-
-
-    /*
 
     //WHILE LOOP ( creating a loop that ouptuts a times table of 5)
     // WHY ISNT THIS PRINTING TO 5 LIKE PG 176??
