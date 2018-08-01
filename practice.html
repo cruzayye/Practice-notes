@@ -5,75 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        body{
+            font-family: sans-serif;
+            font-size: 18px;
+            
+        }
+    </style>
+    <script>
+        function correctfunc(){
+            
+            //first you got to reference the id with a var
+            var correctContainer = document.getElementById('correct');
+            //here we access the var and use innerHTML
+            correctContainer.innerHTML=("you got it");
+        }
+
+        function wrongfunc(){
+            var wrongContainer = document.getElementById('wrong');
+            wrongContainer.innerHTML=('naw son');
+        }
+
+      
+
+
+    </script>
 </head>
 <body>
     <h1>Functions</h1>
-    <input type="button" value="say Hello" onclick="sayHello()">
+    <p>
 
-    <table border="1" align="center" width="300" height="150">
-        <tr>
-            <td colspan="3">1</td>
-            <td>2</td>
-            <td>3</td>
-        </tr>
-        <tr>
-            <td>width="50">4</td>
-            <td>width="150">5</td>
-            <td>rowspan="2">6</td>
-        </tr>
-        <tr>
-            <td>7</td>
-            <td>8</td>
-        </tr>
-    </table>
+    </p>
+    <input type="button" value="correct" onclick="correctfunc()">
+    <p id="correct">answer goes here</p>
+
+    <input type="button" value="wrong" onclick="wrongfunc()">
+    <p id="wrong">2nd answer goes here </p>
+
+
     
 </body>
 
-<script >
-    
-    //INTRO TO FUNCTIONS AND SCOPE
-    var generic = 'hello world';
 
-    function sayHello(name){
-        //name still needs to be defined
-        if(name == ""){
-            alert(generic);
-        } else{
-        alert(name);
-        }
-    }
-
-    function getusername(){
-        var name = prompt('whats your name');
-
-    }
-
-    function numbers(x,y){
-        return x + y;
-    }
-    
-
-
-
-/*
-   var username = prompt('put in uername');
-   while ((username == '') || (username == undefined)){
-        username = prompt('put in uername');
-
-    } 
-    
-    for (var counter = 3; counter>=1; counter--){
-        alert(counter);
-    }
-
-*/
-
-
-
-    /*alert('hello');
-
-    //this is a function that will turn a string to a number. ex "0" would now equal 0
-    parseInt(var)
-    */
-</script>
 </html>
